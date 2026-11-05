@@ -18,6 +18,8 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 
 ## 🗂️ Topology
 
+![GNS3 Topology](results/topology.png)
+
 **GNS3 Network - 5 Routers, 3 Areas**
 
 | Parameter | Value |
@@ -49,6 +51,14 @@ The goal is to demonstrate how iSPF reduces CPU overhead and convergence time by
 | iSPF | Router Down | 4 ms | - |
 | Traditional OSPF | Link Cost Change | 3 ms | Visible |
 | iSPF | Link Cost Change | 3 ms | **None** |
+
+### Link Failure
+
+<img src="results/link%20failure/ospf_linkfailure.jpg" width="400"/> <img src="results/link%20failure/ispf_linkfailure.jpg" width="400"/>
+
+### Link Cost Change
+
+<img src="results/link%20cost%20change/ospf_linkcost.jpg" width="400"/> <img src="results/link%20cost%20change/ispf_linkcost.jpg" width="400"/>
 
 iSPF outperformed Traditional OSPF in every scenario - most strikingly in the link cost change test, where iSPF detected the change was irrelevant to the best path and **skipped the SPF run entirely**.
 
